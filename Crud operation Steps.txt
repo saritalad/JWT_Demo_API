@@ -1,0 +1,40 @@
+step 1 : to show userlist : create service ng g s User (Userservice)
+step 2: add users Array (initialize it with 5 users)
+step 3: write getUser() to return this.users
+step 4 : add component Userlist ng g c UserList
+step 5 : add route in app.routing module   path:'list'
+step 6: In Userlist component create userlist empty array
+step 7: write constructor  (ctor press tab 2) and inject user service as parameter
+step 8: onSubmit ()  assign service.getUser() to userlist 
+step 9: inject router service in consructor and use navigate method to navigate back to userlist 
+component 
+=============================
+To add new User
+step 1: create new component AddUser write Template driven form to collect new user
+step 2 : write constructor and inject userservice,Router service 
+step 3: In Userservice write method Adduser(), call this method in Submit() of AddUser component
+==================================
+to Edit User
+step 1 :write getUserById() in userService
+step 2: create UpdateuserComponent 
+step 3 : modify route in app routing module
+step 4: In Userlist.html Add routerLink Edit with id parameter <a routerLink="/edit/{{user.id}}">Edit</a>
+step 5 : Use Template driven form For that copy html from AddUser to UpdateUser.html (whole code)
+step 6: create currentobj of User type in UpdateComponent
+step 7: write constructor and inject 3 services
+     1 userService
+     2 Router  "
+      3 ActivatedRoute
+step 8 : write ngOnInit()
+and collect route parameter and call getUserById method()
+and Onsubmit call UpdateUser() from service and pass currentobj
+===================================
+To Delte User
+step 1 : add RemoveUser() in service 
+step 2 : create one <a> tag in last td of userlist html
+step 3 write click event  and delete(user.id) method on it
+
+
+
+
+

@@ -1,0 +1,15 @@
+﻿@page "/Employeelist"
+@model RazorPagesDemo.Pages.Employees.IndexModel
+@{
+}
+<div class="container">
+    <ul>
+        @foreach(string e in Model.employeelist)
+        {
+            <li>@e</li>
+        }
+    </ul>
+
+
+
+</div>

@@ -1,0 +1,13 @@
+Razor pages : 
+1 Routing in Razor pages 
+2 Layout File and Configure it
+3 folder Structure of project
+4 LinQ and Lambda Expression (console app C#)
+=========================
+Advantages of using Language integrated queri
+1 Developer does not have to learn evry new DBMS language
+2 it is Uniform way dors not depend upon dbms , even u can use this query language to query data from in Moemory collection
+
+Database Query disadvantage com.CommandText="select id,name, salary frm employes";
+removed in LINQ 
+compile time intellisense is provided

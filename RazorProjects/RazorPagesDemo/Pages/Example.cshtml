@@ -1,0 +1,26 @@
+﻿@page
+@model RazorPagesDemo.Pages.ExampleModel
+@{
+}
+<div style="margin-top:30px">
+    <form method="post">
+
+        <div> enter Name</div> 
+        <div><input asp-for="Name"  /></div>
+        <div><button type="submit"> Submit</button></div>
+     </form>
+     @if(!string.IsNullOrEmpty(Model.Name))
+    {
+        <p>User Entered Name:<b>@Model.Name</b> </p>
+    }
+
+    </div>
+    <div>
+        <ul>
+    @foreach(string f in Model.Fruits)
+    {
+        <li>@f</li>
+    }
+    </ul>
+    <h1>Total Fruits :@Model.Fruits.Count()</h1>
+    </div>

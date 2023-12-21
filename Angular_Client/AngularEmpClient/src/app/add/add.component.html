@@ -1,0 +1,27 @@
+<h1>New Employee!</h1>
+<form #empform="ngForm" novalidate (ngSubmit)="onSubmit(empform.value)">
+    <div>
+      
+            <pre></pre>
+        <div class="form-group">
+            <label for="name">name</label><br>
+            <input #name="ngModel" required minlength="2" maxlength="10" type="text" name="name" class="form-control" ngModel>
+                <p *ngIf="name.hasError('required')"> name is required</p>
+                <p *ngIf="name.hasError('minlength')">minimum length should be 2</p>
+            </div>
+        
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="contact">Contact</label><br>
+            <input type="text" #contact="ngModel"  name="contact" class="form-control" ngModel>
+            <div *ngIf="contact.touched && contact.invalid" class="text-danger">
+                <p *ngIf="contact.hasError('required')">contact is required</p>
+                <p *ngIf="contact.hasError('minlength')">minimum length should be 2</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!empform.valid">Submit</button>
+        {{empform.value.id}}<br>
+        
+        {{empform.value.name}}<br>
+        {{empform.value.contact}}

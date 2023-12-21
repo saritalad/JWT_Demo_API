@@ -1,0 +1,35 @@
+<p>edit works!</p>
+<form #empform="ngForm" novalidate (ngSubmit)="onSubmit(emp)">
+    <div>
+        <h1>New Employee</h1>
+            <pre></pre>
+            <div class="form-group">
+                <label for="id">id</label><br>
+                <input #id="ngModel"  type="number"  readonly name="id"  class="form-control" [(ngModel)]="emp.id">
+            </div>
+        <div class="form-group">
+            <label for="name">name</label><br>
+            <input #name="ngModel" required minlength="2" maxlength="10" type="text" name="name"      class="form-control" [(ngModel)]="emp.name">
+                <p *ngIf="name.hasError('required')">name is required</p>
+                <p *ngIf="name.hasError('minlength')">minimum length should be 2</p>
+            </div>
+        
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="contact">contact</label><br>
+            <input type="text" #contact="ngModel"  name="contact" class="form-control" [(ngModel)]="emp.contact">
+            <div *ngIf="contact.touched && contact.invalid" class="alert alert-danger">
+                <p *ngIf="contact.hasError('required')">contact is required</p>
+                <p *ngIf="contact.hasError('minlength')">minimum length should be 2</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!empform.valid">Submit</button>
+
+        
+  
+
+        {{empform.value.id}}<br>
+        
+        {{empform.value.name}}<br>
+        {{empform.value.contact}}

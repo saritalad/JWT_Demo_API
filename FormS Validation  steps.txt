@@ -1,0 +1,30 @@
+step 1 : create components
+step2 : Add Forms module to App.Module 
+step 3 : create Form with template variables
+=========================================
+model driven form
+step 1: create component
+step 2 : add ReactiveFormsModule
+step 3: Create UserForm using FormGroup and formcontrols and validators
+step 4 write get properties 
+get Firstname()
+{
+  return this.userForm.controls['firstname'];
+}
+
+<div class="col-md-5 mx auto">
+    <div class="form-group">
+        <label for="firstname">firstname</label><br>
+        <input type="text" class="form-control"  name="firstname" formControlName="firstname">
+        <div *ngIf="Firstname.errors && Firstname.touched" class="text-danger">
+            <p *ngIf="Firstname.errors['requied']">Firstname is required </p>
+            <p *ngIf="Firstname.errors['minlength']">min length =3</p>
+        </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    
+    
+
+
+

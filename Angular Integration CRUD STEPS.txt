@@ -1,0 +1,28 @@
+step 1 new project 
+step 2 Bootstrap
+step 3 add Components EMpList,Add,Edit,Details
+step 4 Route configuration
+step 5 Div for Router Link on AppComponent.html
+
+<div class="container">
+
+<div class="btn btn-warning">
+<a routerLink="add">New Employee</a> | | <a routerLink="emplist">All Emloyees</a>||
+ </div>
+ <hr>       
+       <router-outlet></router-outlet>
+      </div>
+step 6 Service ng g s Emp  
+step 7 App.module import HttpClientModule
+step 8 import HttpClient 
+step 9 Url of Web ApI (Url:string),write constructor and GetAll method ( write Model class Employee)
+
+You get Error Because of CORS Policy=> add in API program file 
+ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+ {
+     builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+ }));
+
+ app.UseCors("corsapp");
+
+step 10 write getEmployeeById in service 

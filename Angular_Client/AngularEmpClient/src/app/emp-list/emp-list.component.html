@@ -1,0 +1,23 @@
+
+<h1> Employees List</h1>
+
+  <a routerLink="/Add">New Employees</a> 
+
+<table class="table table-stripped table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Name</th>
+        <tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of emplist">
+            <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.contact}}</td>
+      <td><a routerLink="/Edit/{{emp.id}}"  class="btn btn-warning" >Edit</a></td>
+      <td><a routerLink="/Details/{{emp.id}}">Details</a></td>
+     <td> <a href="javascript:void()" (click)="Delete(emp.id)">Delete</a></td>
+     </tr>
+        </tbody>
+</table>

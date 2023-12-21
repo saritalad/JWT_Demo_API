@@ -1,0 +1,12 @@
+<p>student-marks works!</p>
+<h2>Student Marks</h2>
+    <div>
+      <label for="newMark">Add New Mark:</label>
+      <input type="number" id="newMark" [(ngModel)]="newMark" />
+      <button (click)="addMark()">Add</button>
+    </div>
+    <div *ngIf="sortedMarks$ | async as sortedMarks">
+      <ul>
+        <li *ngFor="let mark of sortedMarks">{{ mark }}</li>
+      </ul>
+    </div>

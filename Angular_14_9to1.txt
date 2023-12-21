@@ -1,0 +1,1575 @@
+Introduction SPA:
+====================
+	MPAs vs SPA
+
+SPA: Single Page Application :
+-------------------------------
+
+
+
+For example:
+
+ReactJs, Angular(AngularJs), Vue.js
+
+
+Introduction Angular:
+========================
+
+Angular is popular and very powerful open-source framework for building SPA for Web and Mobile.(UI)
+
+Developed and maintained by Google.
+
+Framework not a libaray:
+
+It uses TS(Typescript) and Html,css and BS to build app.
+
+Note: The angular itself is written using TS.(it writtren by founder of C#.net)
+
+Why Do we need Angular ?
+===============================
+
+
+Prerequisites to Learn Angular:
+==================================
+	-HTML5
+	-CSS/3
+	-JS
+	-TS(Typescript)
+
+Angular Version:
+=========================
+Version History:
+
+1. AngularJS: 2010( AngularJS was realsed in 2010 by Google, but now no longer updated)
+2. Angular 2 : 2016: Angular +2 framework first came in sep 2016 by Google.
+3. Angular 4 : 2017
+4. Angular 5: Nov 2017
+5. Angular 6: Mar 2018
+6. Angular 7 : Oct 2018
+7. Angular 8 : May 2019
+8. Angular 9 : Feb 2020
+9. Angular 10: Jun 2020
+10. Angular 11: Nov 2020
+11. Angular 12 : May 2021
+
+Latest Version 14
+Angular 14 was released on 2 June 2022. Some new features include typed forms, standalone components, and new primitives in the Angular CDK (component dev kit). Standalone components work across Angular, and they now fully work in HttpClient, Angular Elements, router and more.
+Angular 14+ comes with followign features:
+================================================
+	-Improved Performance (Ivy rendering) 
+		-faster compilation time
+	-new feature : strict template checking(ng-test) (ng-Bind) =ng-bind
+	-Bug Fixes :
+	-Stritly Typed form: 
+	-Stand-alone component
+	-Angular CLI Auto-Completion : ng new project-name 
+--------------------------------------------
+(C# : dotnet new console <name>
+dotnet build 
+dotnet run 
+dotnet test
+-----------------------------------------------
+Angular Environment Setup:
+============================
+
+Software Req for Angular Env Setup:
+---------------------------------------
+	- IDE(for writing the code) : VS code ,Atom,notepadd++,VS 2022
+	- Node.js (Nodejs is an open source cross-platoform JS Runtime Envi)
+	- NPM(Node Package manager) : is nodejs package managef ro JS prorgraming lang its autoamtically installed when install node.
+	- TS (Typescrpt) Its programming lang for Angular only.(it developed by C# founder)
+	- Angular CLI (Command Line interface): Its nothing tools chain that allow you to create a project, build and run the project in development server directly using CLI command.
+
+Installing of Nodejs and NPM:
+===============================
+
+Url: https://nodejs.org/en/download
+	- you can download any latest version(any version as per your req)
+
+
+How to verify the node.js version:
+--------------------------------------
+you can use:
+	 node -v
+	 or
+	 node --version
+
+
+How to Install Angular CLI:
+===========================
+Once you instaleld nodejs and npm , the next important thing that you need to install is Angular CLI.
+
+Step1: open command prompt(nodejs prompt) or vs code terminal(powershell)
+
+Step2: in order ot install Angular CLI on your machine as locally or Globally , you need to use NPM:
+	
+	npm install @angular/cli@version4.2
+	or
+	npm install -g @angular/cli@latest(install latest one)
+	or
+	npm install -g @angular/cli (install LTS)
+
+
+Step 3: After verify Angular CLI:
+	  ng -v
+	  or
+	 ng --version
+
+
+Creating Angular Project using Angular CLI command:
+========================================================
+Step1: First open nodejs command prompt
+	then decide in whichi directory (folder) you want to create the angular project.
+Step 2: In order to create a project suing Angular CLI you need to use 
+	ng new project-name command.
+
+Step 3: Wait for project genration 
+
+Step 4: Navigate to the project Directory(Folder)
+	cd project-name
+STep 5: Serve the project (make live)
+	ng serve (http://localhost:4200/)
+	or
+	ng serve -o(open with default browser)
+
+
+Folder Structure of Angular App:
+================================
+
+Angular projects typicall follow a well-strucutred dir layout to organize code and assets  in efficent manner.
+
+	
+
+Note: open your project using any standard Editor(MS code).
+
+Step1: using VS code :> open file => choose folder => select project name
+
+sTep2: open the project in command prompt
+	type project-name  code . (it will open in vs code)
+
+then i will explain everthing in project structure:
+
+Here some common (main) Directories and files in Angular projects:
+====================================================================
+	-e2e(removed) : This directory contains end to end (E2E) testing code.
+	-node_modules : this where the project dependicices (all lib)
+	-src:this is the source folder of your app. this the place where we need to put all our app souruce code. 
+		-app : this the appliciation folder , whenever you want to create any component, services, modouel , you need to create it wihtin this app folder.
+Inside this you can see:
+		(app-routing.module.js, app.component.html, app.comp.css,app.comp.ts ,app.module.ts)
+
+			-component
+			-services
+			-models
+		-assets : this the folder where you can put all static assets like images, icnons etc. 
+	-environments folder
+	-angular-cli.json(6+ version replaced Angular.json file)
+	-karma.conf.js(karma test runner)
+	-package.json
+	-package-lock.json
+	-tsconfig.json
+	-tslint.json
+	-readme.md
+
+How an Angular App work behind the scenes angular Flow:
+=============================================================
+By flow, means how the file are called and in which sequenece of files the app get execteud when we devlopinig it.
+this one very important question or concept of every developer.
+
+So without delay lets start :
+
+So few files are very important:
+
+1. Angular.json file
+2. Main.ts file
+3. App.Module.ts
+4. App.component.ts
+5. Index.html file
+6. App.component.html file
+
+Angular is a front-end JS framework that follows a specific flow or lifecycle when app is running.
+
+	1. Initialization 
+	2. Bootstrap
+	3. Component tree
+	4. Templates and Data binding
+	5. Change detection
+	7. Services and DI
+	8. Routing and Navigation
+	9. HTTP request
+	10. Directive and Pipes
+
+Modification in Angular Project:
+======================================
+Step1: open app.comp.html file and change it
+STep2: open app.comp.css file and write some css code
+Step3: save and ng serve
+
+Small Hands-on: Create Digital CV using html and css in Angular component
+
+
+
+Angular Component:
+==================
+
+According to Google Team, A componnet controols a patch of screen that we could call a view (UI) and declare resuable UI building block of an application.
+
+Angular component is nothing but HTML TEMPLATE + Component class (TS) file + Metadata(@Decorator).
+
+HTML Template: is nothing but a regular HTML code  with additional angular specific syntax (TS) to communcate with the componnent class.
+
+Class : A component is a Typescript  class that includes properties, methods, modules, to store data and method(functioni) to include business logic for the component.
+
+
+Meta Data: MetaData is some extra data for the componet used by Anngular API to execute the component such the location, of the htmlo and css file of the component: selector, provider etc.
+
+
+
+How to Create and Generate Angular Component using Angular CLI:
+=================================================================
+Step1: Open commandprompt
+	=> Type ng generate component <comp_name>
+	=> ng g c Hello
+
+Step 2: open App.component.htl file and bind your component and props (inject)
+	=> <app-Hello> </app-Hello>
+
+
+
+Note: you cann create a collections of componnet in Angular (Page in Angular)
+-----------------------------------------------------------------------------------------
+
+
+We continue Angular session:After TS(Typescript):
+===================================================
+TS:(Typescript): is an open source pure objecte oriented language like c#,java. Strongly typed superset fo JS which compiles plain JS file.
+It contains all the elements of the JS. Its language desiged for large scale JS application development for Front-End App, which can be executed on any standard browssers any Host, any OS.
+
+TS can not run directly on the browser. it needs a comple(tsc) to compile the file and genrate the its JS file whywic can be run by any browser.
+
+TS source is having extension ".ts" file.
+
+
+How to it does ?
+------------------------
+
+File.ts =>(TSC->file.ts)=> File.js file
+
+Why we use TS:
+-------------------
+		-TS support static typing, strongly type,module etc
+		-TS support OOPs.
+		-TS is more faster than JS, and most importantly easy to learn (C/C++/C#)
+		-TS supports all JS lib because its superset of JS.
+
+
+Typescript Editor:
+===================
+	- VS code
+	-Atom
+	-Node++
+	-Webstrom
+
+Latest Version of TS:5.2
+
+
+
+TS Installation:
+====================
+	- you have to install Node.js and NPM
+	- you need to install TS compile (TS)
+
+Ways to install TS in local machine:
+	- By help npm
+	- By help plug-in your IDE VS code
+command: npm install typescript -g
+
+Example : first program in ts
+
+	1. Open any editor
+	2. Write the code : console.log("Hello this is TS file")
+	3. Save file with ts extension
+	4. tsc <file.ts>
+	5. (converted file.js file)
+	6. node <filename> or Node Hello.js
+
+TS : Type Annotations: TS is typed lang, where we can define the type fo the variable , function, object,props, we can specify the type using (:) opt after the name of the variable, method etc.
+
+For Example:
+
+var age:number=23;
+var n:string="Sanjay";
+let isT:boolean=true;
+var city="Chandigarh";
+//es6
+
+//print all
+console.log("MY age is:"+age);
+console.log(city)
+//es5
+let z=`this is es5 string`;
+console.log(z);
+
+
+
+TS Data types:
+====================
+TS lang supports diff data types, it provides data type for JS to tranform it into stronlgy type programming.
+
+It may be as:
+	-Static (Built-in , user-defined)
+	-Generics(Collections)
+	-Decorators(@Symbol)
+
+Lets do with Built-in Data types:
+====================================
+Simple example with built-in data types to sum two numbber
+
+let a:number=100;
+let b:number=20;
+let res:number;
+
+res=a+b;
+console.log(res);
+
+
+TS Operators:
+================
+An operator is symbol which operates on a value or data(operands).
+It may be :
+		-Arithemtic opt(+,-,*,/%)
+		-Comparison opt(<,>,<=,>=,==)
+		-Logical opt(&&,||,!)
+		-Assignment opt(=,+=,-=,*=,/=)
+		-Ternary opt/conditional opt(exp1?exp2:exp3)
+		-Concatenation opt (join more than one string)
+
+Example:
+let a:number=100;
+let b:number=20;
+
+
+//comparsion
+
+console.log(a==b);
+console.log(a==100)
+console.log(100==b)
+
+//=== : eaul and of the same data type
+console.log(a===b);
+console.log(a!=b);
+console.log(a!==100);
+
+//note you can try >,<,>=<= in your code
+
+
+
+Example : logical opt
+
+Example of ternary opt:
+---------------------------
+let num=100;
+let res=(num>100)?"True":"False";
+
+console.log(res);
+
+var n=-2;
+var result=n>0?"Positive":"Non-positive";
+console.log(result);
+
+TS Concatenation:(+):
+========================================
+let message="Welcome to "+"Dxc.com";
+console.log(message);
+
+Type OPerators:
+=================
+There are collecction of operators avilable in TS
+	-in opt : is used to check for the existence of a prop(variable) on an object.
+	-delete opt: is used to delete the props from the object
+	-typeof : is used return the data types fo the operands.
+	-instanceof : is used to checck if the object of a specified type or not.
+
+Example:
+let Bike={make:'Honda',model:'Class',year:2023};
+
+//in opt
+console.log('make' in Bike);
+console.log('year'in Bike);
+//delete
+
+let Bike1={Company1:'Honda',Company2:'hero',Company3:'Royal Enfield'};
+
+//try to delete
+delete Bike1.Company1;
+console.log(Bike1);
+//typeof
+let hello="Welcome in "+"Angualr";
+console.log(typeof hello)
+
+//instance of 
+let a=[1,2,4,5,6];
+console.log(a instanceof Array);
+console.log(a instanceof String);
+
+
+Control Statement or Decision Makaing in TS:
+===============================================
+
+	a. if statement 
+			-if statemnt
+			-if...else statemnet
+			-if...else.if statement
+	b . switch statement
+	c. Looping
+			-for
+			-while
+			-do..while
+			-special loop(for..of loop)
+
+Example of if statement:
+===============================
+let x:number=100;
+let y:number=200;
+if(x>y){
+    console.log('x is greater than y');
+}
+
+//else 
+else
+{
+    console.log('y is graater than x')
+}
+
+TS : if..else..if statement:(nested if):
+============================================
+let num=1234;
+if(num<100 && num>1){
+    console.log('its two digit number')
+}
+else if(num<1000 && num>=100){
+    console.log('its 3 digit number')
+}
+else if(num<10000 && num>=1000)
+{
+    console.log('its 4 digit number')
+}
+else if(num<100000 && num>=10000){
+    console.log('its 5 digit number')
+}
+else
+{
+    console.log("Number is not between 1 to 999999");
+}
+
+Switch statement:
+=================
+
+let a=3;
+let b=2;
+switch(a+b)
+{
+    case 1:
+        {
+        console.log("a+b is 1");
+        break;
+        }
+        case 5:
+            {
+                console.log("a+b is 5");
+                break;
+            }
+            case 3:{
+                console.log("a+b is 6");
+                break;
+
+            }
+            default:
+                console.log("Wrong ans");
+                break;
+
+}
+Looping example:
+==================
+for(let i=1;i<=5;i++)
+{
+console.log('hello')
+}
+//print 1 to 10
+for(let j=1;j<=10;j++){
+    console.log(j)
+}
+
+TS while loop:
+=============
+for(let i=1;i<=5;i++)
+{
+console.log('hello')
+}
+//print 1 to 10
+for(let j=1;j<=10;j++){
+    console.log(j)
+}
+
+//while
+let k=1;
+while(k<=5)
+{
+    console.log(k);
+    k++;
+}
+//do..while
+
+let m=1;
+do
+{
+    console.log(m);
+    m++
+}while(m>=5);
+
+TS for ..of loop:
+==================
+The for ..of loop is used to iterate and access the elemnt of an array, set, map,list,tupple etc.
+
+Sytnax:
+
+for(var value of list)
+{
+statement to be executed
+}
+
+Example:
+
+let a=[1,2,3,4,566];
+//fetch
+for(let i of a){
+    console.log(i)
+}
+
+//string value with for..of 
+let book:string[]=["java","python","dotnet","css"];
+
+for(let k of book)
+{
+    console.log(k)
+}
+
+TS for..in loop:
+============
+The for..in is uswed with array,list tuple etc.
+
+sytnax:
+
+for(var value in list)
+{
+statement
+}
+
+Example:
+
+//for in 
+
+for(let m in book)
+{
+    console.log(m)
+}
+
+let str:any="DXC Tech";
+for(let index in str){
+    console.log(str[index])
+}
+
+TS FUNCTION(METHOD IN OOPS):
+=============================
+Functions are the fundamental building block of any app in JS. it makes the code readable, maintabable and resuable.
+We can use it to build up layers of abstraction including classes, moduels etc.
+
+Function Aspects:
+=================
+There are 3 aspects of a function
+	1. Function declaration 
+	2. Function definition
+		function function_name(ar1,par2,argN) { code }
+	3. Function Call :
+
+
+Function Creation:
+======================
+We can create a function in two diff ways:
+	a. Named function
+	b. Anonymous function(arrow/lambda in ES6)
+
+
+Named function: When we declare and call funcction by its given then this type of function is known as named function.
+
+Syntax:
+
+functionName(arguments) { }
+
+
+example:
+
+function Show()
+{
+    console.log('Welcome in function in TS');
+}
+
+//here you call call
+//call after the curlly braces
+Show();
+Show();
+
+TS function with return:
+============================
+
+function GetMessage():string{
+    return "hello wew are using return statemnet in ts function"
+}
+
+//call the method or function getMessage
+//1st way
+var res=GetMessage();
+console.log(res);
+
+//2nd way
+console.log(GetMessage())
+
+
+TS function with parameter: you can pass a pra or agument wihtin a function.
+
+Syntax:
+
+function function_name(para1:datatype,para2:datatype)
+{
+}
+
+Example:
+function Show(Id:number,name:string){
+    console.log(Id+"  "+name);
+}
+
+//i will pass the argumnet while calling
+Show(101,"Sanjay");
+Show(102,"Reema");
+
+
+TS Anonymous function:
+=========================
+A function wihtou a name is knonw as an anoymous function. These type function dynamically delcared at a runtime.
+
+
+Its defined as an expression , we can store it in a variable, so it does not need function name like stnadard fucntion (c,c++,c#) its accespt inputs and return ouput.
+
+Syntax:
+
+let res=function([args] { }
+
+
+Example:
+var Hello=function()
+{
+    return "hello i am anonynmous with return"
+}
+//call it
+console.log(Hello());
+
+//anoymous with para
+var greeting=function(name:string){
+    return "hi this para";
+}
+//call with para
+console.log(greeting("Sanjay from dxc"))
+
+Arrow function(Lambda functioin(=>) :
+=======================================
+TS lambda or arow functions are usesd to represnt anoymous function.
+TS arrow may be two tyeps;
+
+	- parameteres
+	- lambda notation(=>)
+
+Syntax:
+
+([para1]...para2,para3])
+
+Example:
+
+
+
+//arrow
+let h=()=>console.log('hi this is lambda');
+
+//call now
+h();
+
+//lambda with para
+let sum=(x:number,y:number)=>x+y;
+console.log(sum(100,22));
+=====================================================
+Note: basic TS concept has been finished
+====================================================
+
+Contine with Angular Session
+
+Setting up Child Component as Root:
+---------------------------------------------
+
+Process:
+
+Step1: open Index.html file
+	and change the Root Selector
+		<app-MyComp>
+
+Step2: amke child as default
+	open =>app.module.ts file and the boostrap array
+		set Mycomponent is the startup component
+		bootstrap:[MyComponent]
+
+Step 3: save and run
+
+
+
+Template vs TemplateURL in Angular:
+======================================
+
+As we already discussed that template is part of a component that is used to render(UI) the view with which the end user can interact.
+
+We have 2 type of Tempalte in Angular:
+		-Inline Template
+		-External Template( templateUrl: './app.component.html')
+
+
+
+InLine Template:
+==================
+In Angular App, the inline templates are diectly specified in the component decorator using the template property.
+
+that means you need tow rite the req HTML inside the TS file
+
+Lets understand with an example:
+
+
+Step1: Open App.compo.ts file and modify the component decorator
+
+@Component({
+  selector: 'app-root',
+  template:`
+  
+  <h2> Welcome in Inline Template </h2>
+  <br>
+  <div>Inline template means you can write code in app.com.ts file instead of app.com.hhtml file </div>
+  `,
+ // templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'demoChandana';
+ 
+}
+
+
+Angular Nested Component :
+============================
+The Angular framework allow us to use component within another componnent and when we do so the it called Angular Nested Componnent.
+
+
+Step1: Create a component (student)
+	ng g c student
+Step2: Modify student component html file
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>{{Name}}</td>
+    </tr>
+    <tr>
+        <td>Branch</td>
+        <td>{{Branch}}</td>
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td>{{Mobile}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{Gender}}</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>{{Age}}</td>
+    </tr>
+</table>
+Step3: modify student.comp.ts file
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-student',
+  templateUrl: './student.component.html',
+  styleUrls: ['./student.component.css']
+})
+export class StudentComponent {
+//modify all the prop
+Name:string='Sanjay';
+Branch:string='CSE';
+Mobile:number=9393993;
+Gender:string='Male';
+Age:number=34;
+}
+Step4: modify app.comp.ts file
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template:`
+  
+ <div>
+<h1>
+{{pageHeader}}
+</h1>
+<app-student></app-student>
+
+ </div>
+  `,
+ // templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'demoChandana';
+  pageHeader:string="DXc Training ";
+ 
+}
+
+style.css code:
+
+/* You can add global styles to this file, and also import other style files */
+table{
+    color:#456;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    border-collapse: collapse;
+
+}
+td{
+    border:1px solid blue;
+}
+Step5: save and run : ng serve
+
+
+
+Angular STyleing component page:
+==================================
+you can write inline code to enhance the css in component page
+
+<table style="color:#456; font-family: Arial, Helvetica, sans-serif;">
+    <tr>
+        <td style="border: 1px solid grey;">Name:</td>
+        <td>{{Name}}</td>
+    </tr>
+    <tr>
+        <td>Branch</td>
+        <td>{{Branch}}</td>
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td>{{Mobile}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{Gender}}</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>{{Age}}</td>
+    </tr>
+</table>
+
+Data binding in Angular:
+=============================
+
+Data binding is fundamental concept in Angular that allows you to synchronize and maiplaute data b etween your ucommponet.
+
+TS code and your component template(HTML) .
+
+
+
+Why do wee need Data binding ?
+
+
+Whenever you want to develope any data driven web app, then as developer you need to keep the foucs on two important things that Data and UI(user interface) and its more imporatnt for you to find an efficent way to bind thehm(Data +UI) together.
+
+We have diff kind of Data biding apporaches in Angular:
+	1. Interpolation (ONe-way data binding) : {{}}
+	2. Property Data biding (One Way data binding) : [property]="expression"
+	3. Event binding (One way data binding ) : (event)="expression"
+	4. Two way data binding (ngModel)
+
+
+
+
+
+One-Way : In the one-way binding data flows from one direction ,either from view to Component or From Componett to View:
+
+Interpolation:{{}}:
+=====================
+Its allows us to include expression as part of any string literal, which we use in out HTML.
+
+The angular evaluates the expression into a stirng and repalce it in the original string and update your view .
+
+syntax:
+
+{{templateExpression}}: here you can any content. that is ccalled Template Expression
+
+
+Step1: open app.comp.ts file
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template:`
+  
+ <div>
+
+<p>Name:{{firstName}} </p>
+<br>
+<p>{{20+2}} </p>
+
+<p>{{1000*5*5/100}}</p>
+
+
+ </div>
+  `,
+ // templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'demoChandana';
+  firstName:string="Sachin";
+
+
+
+ 
+}
+
+
+Note: you can also use TS function to bind prp using {{}}:
+=========================================================
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template:`
+  
+ <div>
+
+<p>Full name:{{GetName()}} </p>
+<br>
+
+
+
+ </div>
+  `,
+ // templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+ 
+
+Firstname:string='Sanjay';
+LastName:string="KUmar";
+
+//dec a function
+GetName():string{
+  return this.Firstname+' '+this.LastName;
+}
+
+ 
+}
+
+
+Interpolation in Angular with Ternary operator:
+=================================================
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template:`
+  
+ <div>
+
+<p>Last Name:{{LastName?LastName:'Not avilable'}} </p>
+<br>
+
+<img src={{ImagePath}}/>
+
+
+
+ </div>
+  `,
+ // templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+ 
+
+
+LastName=null;
+
+ImagePath:string="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+}
+
+ 
+
+Angular Property Binding: [property]="expression"
+==============================
+
+Property binding in Angular allow you to set the value of an HTML elemnet property based on a  property or expression in your component.
+
+Step1: app.comp.ts file 
+<div>
+<h2>Details: <input type="text" [value]="title"></h2>
+<br>
+Age:<input type="text" [value]="age">
+
+<br>
+<br>
+<img [src]="ImagePath">
+
+ 
+title='angular prop binding';
+age:number=34;
+
+
+ImagePath:string="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+
+NOte: create a proerty to bind with html elemennt: Id,Name,Job,Location, contact, email,companny
+even you can css form to make more interactive.
+
+
+Property binding with Enable and disable:
+============================================
+Syntax:
+
+<button [disabled]="props">
+
+step1: app.com.ts file
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template:`
+  
+ <div>
+<button [disabled]="isDisabled">I am disabled button </button>
+ </div>
+  `,
+ // templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+ 
+//props
+isDisabled=false;
+
+}
+
+ 
+
+
+
+Attribute Binding:
+==================
+We already discussed with {{}} , prop binding [], here we are going to learn Attribute binding , sometime you are not able binding DOM(Document Objecct Model) in Angular with help of Interpolation ({{}}) and Prop binding in such cases you need to use Attribute binding, you can set the value of HTML element using attribute binding directly.
+
+So attribute binding is used to bind the attribute of an element with prop of component dyamically.
+
+====================================================================================================
+Attribute binding is often used for non-standard atribute suuch colspan and rowspan , fonts, custom data attribute
+===========================================================================================
+
+Step1: open app.comp.ts fiel
+
+export class AppComponent {
+
+  ColumnSpan:number=2;
+ 
+pageHeader:string='Dxc Traing 23';
+fName:string='Sanjay';
+lName:string='Kumar';
+Branch:string="DevOps";
+Mobile:number=9339393;
+Gender:String='Male';
+Age:number=34;
+
+}
+Step2: open app.comp.html file and modify it
+<h1>
+  Welcome in DXC Training
+</h1>
+<table>
+  <thead>
+    <tr>
+      <th [attr.colspan]='ColumnSpan'>{{pageHeader}}</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fname</td>
+      <td>{{fName}}</td>
+  </tr>
+  <tr>
+    <td>lName</td>
+    <td>{{lName}}</td>
+</tr>
+    <tr>
+      <td>Branch</td>
+      <td>{{Branch}}</td>
+  </tr>
+  <tr>
+      <td>Mobile</td>
+      <td>{{Mobile}}</td>
+  </tr>
+  <tr>
+      <td>Gender</td>
+      <td>{{Gender}}</td>
+  </tr>
+  <tr>
+      <td>Age</td>
+      <td>{{Age}}</td>
+  </tr>
+  </tbody>
+  
+</table>
+
+
+Class Binding in Angular:
+===========================
+Angular allows you to add or remove CSS clases dynamiccally to HTML elemnt based on conditions or component prps.
+Thhsi provides a way to control the styling and appearance of elemnt in your App.
+
+syntax:
+
+html element<css-class><prop>
+
+Example:
+
+step1: open style.css
+	create the class in .withname
+	.text-success{color:red;}
+
+step2:open app.com.ts file 
+	dec property and call yourr css class here
+	
+	publilc successClass="text-success";
+
+Step3: bind with prop wiwth app.comp.html file
+
+<h2 [class]="successClass">Welcome in class binding </h2>
+
+
+class binding with [ngClass]:
+===================================
+class binding with [ngClass]:import NgClass directive is buil-in feature of angular and does not require aditional mododule to import. you only need to make sure that '@angular/forms'.
+
+
+===================================
+
+
+Step1:  open app.module.ts file
+
+
+import { FormsModule } from '@angular/forms';
+
+
+
+  imports: [
+     FormsModule
+  ],
+  providers: [],
+
+import it init array :
+	FormsModule
+
+Step2:open app.comp.css file
+	create  css classes
+.text-success{
+    color:blue;font-family: 'Courier New', Courier, monospace;
+    background-color: gold;
+}
+.red{
+    color:red;
+}
+.size30{font-size: 30px;}
+
+Step3: app.comp.html file
+	call your [ngClass] with all css clases
+  <div [ngClass]='"red size30 text-success"'>I am using Ngclass binding </div>
+
+
+Another with multiple css classes:
+========================================
+Step1: create css classes
+
+.first{
+    background-color: #45678c;
+}
+.second{
+    font-size: 30px;
+    padding-left: 20px;
+}
+.third{
+    height: 10%;
+}
+.fourth{
+    padding-top:20px;
+}
+Step2: call it in app.comp.html file
+
+
+  <div [ngClass]="'first second third'">
+    <p [ngClass]="'fourth'">ngclass example</p>
+  </div>
+
+
+using ngClass with an object:
+==================================
+The ngclass Directive can also be used with an object to conditionally apply css classes based on boolean value.
+
+Example: 
+Step1: Create css classes
+
+Step2: Modify your component.html page
+<div [ngClass]="{'first':true}">
+    <p [ngClass]="{'second':true}">ngclass with object</p>
+</div>
+Step3: serve your app
+
+Question: using ngClass
+
+Suppose you have one website in Angular  and you wanto to displaly producct listing .
+Each product has tilte,Price, Rating
+put some value of list
+
+Title | Price | Rating
+-------------------------
+Mobile 3999       4.6
+
+you have to do the style of product based on the product rating with diff colors.
+
+condition:
+
+For product with rating 4.0 or higher display title in Green color.
+For product with rating 3.0 and 3.9 title color : orange
+For producct with rarting below 3.0 : titlle in red
+
+
+Kindly use ngClass directive to do this
+
+
+Step1: create produuctlist.ts file
+  
+//dec prop,method,object,array etc
+
+products=[
+{title:'Mobile',price:50,rating:4.5},
+{title:'Pen drive',price:30,rating:3.2},
+{title:'LED',price:20,rating:2.8},
+]
+
+//create a method  to check the condition
+
+CheckRating(rating:number):any{
+  if(rating>=4.0){
+    return 'green';
+  } else if(rating>=3.0 && rating<4.0){
+    return 'orange';
+  }else {
+    return 'red'
+  }
+}
+}
+
+ 
+
+Step2: css clases
+
+
+
+
+
+.green{
+    color:green
+}
+.orange{
+    color:orange
+}
+.red{
+    color:red;
+}
+Step3: modify app.com.html 
+
+<div *ngFor="let p of products">
+    <div [ngClass]="CheckRating(p.rating)">
+        <h2>{{p.title}}</h2>
+        <p>Price:${{p.price}}</p>
+        <p>Rating:{{p.rating}}</p>
+    </div>
+</div>
+
+
+
+
+Angular STyle binding:
+=======================
+
+The Angular sytyle binding is baiscally used to set the style in HTML element. you can both inline as well as style binding to sset the style in the element in Angularl app.
+
+Step1: create a props: 
+  
+  IsBold:boolean=false;
+
+step2: call this on app.comp.html page
+
+
+<div>
+    <button style='color:red' [style.fontWeight]="IsBold?'bold':'normal'">Show me</button>
+</div>
+
+
+Multiple inline style in Angular App:
+========================================
+if you want to set multiple inline styels in app,, then you can use NgStyle directive.
+
+Step1: create props and method:
+ 
+  IsBold:boolean=true;
+fontSize:string='20px';
+  IsItalic:boolean=true;
+
+  fontColor:string='lime';
+
+
+  //method to call all styles
+AllStyles(){
+  let cssstyle={
+    'font-weight':this.IsBold?'bold':'normal',
+    'font-style':this.IsItalic?'italic':'normal',
+    'font-size.px':this.fontSize
+  
+  };
+
+  return cssstyle;
+}
+
+STep2: implement this app.comp.html
+<div>
+
+    <button style='color:blue' [ngStyle]="AllStyles()">click on me</button>
+</div>
+
+Another one:ngStyle directive
+===============
+
+step1: props
+
+fontSize:string='50px';
+
+
+  fontColor:string='lime';
+
+Step2: app.comp.html 
+
+<div>
+    <label [ngStyle]="{'color':fontColor,'font-size':fontSize}">
+        India won the match
+    </label>
+</div>
+
+Angular Event Binding:
+========================
+When a user interacts with an app in form of a keyboard movement, button click mouse over, selcting from dropdowlist, etc it generate an event.
+These event need to be handled to perform some kind of action. this is where event binding comes into the picture.
+Number of events: click, dblclick,mousesdown/up,mouseover etc
+Example1:
+
+Step1: create a method to pass the event
+ 
+show():void{
+  console.log('Button is clicked by me');
+}
+
+
+or
+
+//another one
+Display(){
+  alert('welcome in dxc');
+}
+
+
+step2: call your method on button using any events(click).
+<div>
+ <button (click)="show()">Show me</button>
+</div>
+
+<button (mouseover)="Display()">Move on me </button>
+
+
+Passing Event Objects:
+========================
+you can also pass the event objecct to the method by using $event:
+
+Step1: 
+
+  show(event:MouseEvent){
+    console.log(event)
+  }
+
+Step2: call it on app.com.html page
+ <div>
+ <button (click)="show($event)">Click on me </button>
+</div>
+
+
+
+Another of Event Binding :
+================================
+Step1: open app.comp.ts file and dec props with a function
+
+export class AppComponent {
+  ColumnSpan:number=2;
+ 
+  
+  fName:string='Sanjay';
+  lName:string='Kumar';
+  Branch:string="DevOps";
+  Mobile:number=9339393;
+  Gender:String='Male';
+  Age:number=34;
+  //dec one method that control the data on view 
+ShowDetails:boolean=true;
+
+
+  Details():void{
+    this.ShowDetails=!this.ShowDetails;
+  }
+
+Step2:call it on app.comp.html file
+
+<table>
+    <thead>
+      <tr>
+        <th [attr.colspan]='ColumnSpan'>Student Details Page</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fname</td>
+        <td>{{fName}}</td>
+    </tr>
+    <tr>
+      <td>lName</td>
+      <td>{{lName}}</td>
+  </tr>
+      <tr *ngIf='ShowDetails'>
+        <td>Branch</td>
+        <td>{{Branch}}</td>
+    </tr>
+    <tr *ngIf='ShowDetails'>
+        <td>Mobile</td>
+        <td>{{Mobile}}</td>
+    </tr>
+    <tr *ngIf='ShowDetails'>
+        <td>Gender</td>
+        <td>{{Gender}}</td>
+    </tr>
+    <tr *ngIf='ShowDetails'>
+        <td>Age</td>
+        <td>{{Age}}</td>
+    </tr>
+    </tbody>
+    
+  </table>
+  <br>
+  <button (click)='Details()'>
+    {{ShowDetails?'Hide':'Show'}} Details
+  </button>
+
+
+ANGULAR TWO WAY BINDING:
+===========================
+
+ 1. What is Angular Two-way binding
+ 2. Example to understand Two-way data binding
+
+
+The most poppular and widely used data binding process in Angualr is Two-way data binding.
+
+The two-way data binding is basically used in the input type filed(textbox) or any form elemnet where the user type or provide any value or change any contgrol value on the one side and on the other side.
+
+At same time automatially value updated into the component variable and vice-versa.
+
+The two data bindding is combination of :
+
+	Prop Binding + Event binding
+		     +
+	ngMode = Two way data binding
+
+
+Example:
+
+Step1: Open App.module.ts 
+	here you must import 
+	import {FormsModule} from '@angular/forms';
+
+Step 2: call formModule inside import Array
+
+imports: [
+ 
+    FormsModule
+   
+  ],
+
+Step3: create any property
+	Name:string="Dxc Tech";
+
+
+Step4: Open app.comp.html file and bind your prop with HTML element
+
+Name:<input [(ngModel)='Name'>
+
+Note: ngModel can be used for both one-way and two-way data binding.
+here ngModel directggive internally keeps an eye on the vent and reacct to thsse vents when the control value cchanges.
+
+
+Display your prop value:
+	<p> You have entered :{{Name}} </p>
+
+Another example with 2-way data binding:using event binding
+
+
+Assignment:
+===========
+
+Suppose you have an app to manage the user profile .
+user have : name,email status 
+
+create a profile.html page and bind all the property with ngModel(2-way data binding)
+
+Name: 
+Email:
+Statu: Active/Inactive
+
+and finally:
+
+it should display:
+
+<h2>User Profiles</h2>
+
+<div> {{user.name}}, {{user.email}},{{user.status}}
+
+What are the Angular Directive:
+================================
+
+
+

@@ -1,0 +1,6 @@
+<p>social works!</p>
+<ul *ngFor="let f of friendlist">
+<li>
+   {{f.name}}  <button type="submit" (click)="IncrementCount(f)">{{f.likecount}}</button>
+</li>
+</ul>
